@@ -1,4 +1,5 @@
 import os
 
 print("run calc...")
-os.system("calc")
+input()
+#os.system("calc")

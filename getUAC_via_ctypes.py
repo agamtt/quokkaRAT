@@ -3,7 +3,7 @@ this code does not works on vscode env,
 because vscode priviledge context is user, not admin
 '''
 
-import ctypes, sys, os
+import ctypes, sys
 
 def is_admin():
     try:
@@ -13,8 +13,9 @@ def is_admin():
 
 if is_admin():
     # Code of your program here
-    # print("im admin!")
-    os.system("calc")
+    print("im admin!")
+    input()
+    #os.system("calc")
 else:
     # Re-run the program with admin rights
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
